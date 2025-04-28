@@ -62,4 +62,4 @@ There are two factors that can also have an impact on the tracker performance: o
 During the tracking process, the ability to distinguish and reidentify players based on the their appearance features is vital to the tracker’s performance. However, since players on the same team wear the same colored jerseys, they have similar appearances, and the most distinctive appearance feature is the number printed on the back of the jersey. If the number is not visible, this will increase the difficulty of distinguishing players from the same team significantly. As shown in the figure below, a portion (27.5%) of the tracklets cannot be identified by player number. 
 
 
-![logo](analysis/player_tracklet_chart.jpg)
+![logo](mcgill-hockey-tracking-data/analysis/player_tracklet_chart.jpg)
