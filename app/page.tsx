@@ -1,13 +1,32 @@
+"use client";
+
 import Image from "next/image";
+import { FiUpload } from "react-icons/fi";
 
 export default function Home() {
   return (
 
     <div className="">
-      <button className="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500">
-        Invert it
-      </button>
+      <input 
+        type="file"
+        id="file-upload"
+        className="hidden"
+        accept="video/*"
+        onChange={(e) => {
+          const file = e.target.files?.[0];
+          if (file) {
+            console.log("Selected file: ", file);
+          }
+        }}
+      />
+        <button
+          onClick={() => document.getElementById('file-upload')?.click()}
+          className="px-8 py-2 lg:mt-5 mt-0 lg:mb-5 mb-10 flex items-center gap-2 rounded-md bg-stone-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-stone-500">
+          <span>Upload a Hockey Clip</span>
+          <FiUpload/>
+        </button>
     </div>
+    
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
     //   <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
     //     <Image
