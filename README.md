@@ -2,18 +2,6 @@
 
 Following the same format as the MOT challenge dataset, this dataset labels hockey players instead of pedestrians. 
 
-### Citation
-If you find this dataset useful to your research, please cite the following article
-
-```
-@article{MHPTD,
-  title={A Method for Tracking Hockey Players by Exploiting Multiple Detections and Omni-Scale Appearance Features},
-  author={Yingnan Zhao, Zihui Li, Kua Chen},
-  journal={Project Report},
-  year={2020}
-}
-```
-
 The dataset follows the same format as the popular [MOT challenge dataset](https://motchallenge.net/) for pedestrian tracking. An entry in the dataset representing an instance of a player is shown in Table below. The only significant difference between the HPDT and the MOT challenge dataset is the way identity is assigned. Our HPDT dataset assigns identity at a personal level, and the MOT challenge assigns identity at a tracklet level. To be specific, when a person exits and then re-enters the field of view, this person will produce two tracklets. The MOT challenge dataset assigns two unique identities to each one of them, whereas the hockey dataset assigns the same identity to both tracklet.
 
 |frame number|Player Id|left corner x|left corner y|height|width|detection confidence|tracklet id|visibility|
