@@ -3,6 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.bg-video {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -4,8 +4,8 @@ import Image from "next/image";
 import { FiUpload } from "react-icons/fi";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Upload, Video } from "lucide-react";
+import UploadCard from "./components/upload-card";
 
 export default function Home() {
   return (
@@ -18,22 +18,13 @@ export default function Home() {
           commentary.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <Button asChild size="lg" className="gap-2">
-            <Link href="/upload">
-              <Upload className="h-5 w-5" />
-              Upload Video
-            </Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="gap-2">
-            <Link href="/analytics">
-              <BarChart3 className="h-5 w-5" />
-              View Analytics
-            </Link>
-          </Button>
+            <div className="lg:col-span-2">
+              <UploadCard/>
+            </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl w-full">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl w-full">
         <div className="bg-card rounded-2xl p-6 shadow-lg">
           <Video className="h-10 w-10 mb-4 text-primary" />
           <h3 className="text-xl font-semibold mb-2">Player Tracking</h3>
@@ -51,7 +42,7 @@ export default function Home() {
           <h3 className="text-xl font-semibold mb-2">AI Commentary</h3>
           <p className="text-muted-foreground">Professional sports-commentator voice track generated via AI.</p>
         </div>
-      </div>
+      </div> */}
     </div>
     
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
