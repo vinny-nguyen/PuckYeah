@@ -12,7 +12,7 @@ export default function Home() {
 
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4">
       <div className="max-w-3xl text-center space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Advanced Hockey Video Analysis</h1>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">PuckYeah: Hockey Analysis</h1>
         <p className="text-xl text-muted-foreground">
           Upload your hockey clips and get AI-powered insights, player tracking, scoring probabilities, and professional
           commentary.
