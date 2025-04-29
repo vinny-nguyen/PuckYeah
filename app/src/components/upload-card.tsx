@@ -4,9 +4,9 @@ import type React from "react"
 
 import { useState } from "react"
 import { Upload, FileUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
+import { Button } from "app/src/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "app/src/components/ui/card"
+import { Progress } from "app/src/components/ui/progress"
 
 export default function UploadCard() {
   const [isDragging, setIsDragging] = useState(false)

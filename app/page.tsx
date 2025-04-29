@@ -5,14 +5,14 @@ import { FiUpload } from "react-icons/fi";
 
 import Link from "next/link";
 import { ArrowRight, BarChart3, Upload, Video } from "lucide-react";
-import UploadCard from "./components/upload-card";
+import UploadCard from "./src/components/upload-card";
 
 export default function Home() {
   return (
 
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4">
       <div className="max-w-3xl text-center space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">PuckYeah: Hockey Analysis</h1>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">PuckYeah: AI Hockey Analysis 🏒</h1>
         <p className="text-xl text-muted-foreground">
           Upload your hockey clips and get AI-powered insights, player tracking, scoring probabilities, and professional
           commentary.
