@@ -3,28 +3,55 @@
 import Image from "next/image";
 import { FiUpload } from "react-icons/fi";
 
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BarChart3, Upload, Video } from "lucide-react";
+
 export default function Home() {
   return (
 
-    <div className="">
-      <input 
-        type="file"
-        id="file-upload"
-        className="hidden"
-        accept="video/*"
-        onChange={(e) => {
-          const file = e.target.files?.[0];
-          if (file) {
-            console.log("Selected file: ", file);
-          }
-        }}
-      />
-        <button
-          onClick={() => document.getElementById('file-upload')?.click()}
-          className="px-8 py-2 lg:mt-5 mt-0 lg:mb-5 mb-10 flex items-center gap-2 rounded-md bg-stone-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-stone-500">
-          <span>Upload a Hockey Clip</span>
-          <FiUpload/>
-        </button>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4">
+      <div className="max-w-3xl text-center space-y-6">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Advanced Hockey Video Analysis</h1>
+        <p className="text-xl text-muted-foreground">
+          Upload your hockey clips and get AI-powered insights, player tracking, scoring probabilities, and professional
+          commentary.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <Button asChild size="lg" className="gap-2">
+            <Link href="/upload">
+              <Upload className="h-5 w-5" />
+              Upload Video
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="gap-2">
+            <Link href="/analytics">
+              <BarChart3 className="h-5 w-5" />
+              View Analytics
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl w-full">
+        <div className="bg-card rounded-2xl p-6 shadow-lg">
+          <Video className="h-10 w-10 mb-4 text-primary" />
+          <h3 className="text-xl font-semibold mb-2">Player Tracking</h3>
+          <p className="text-muted-foreground">
+            Automatic detection of players and puck with real-time bounding boxes.
+          </p>
+        </div>
+        <div className="bg-card rounded-2xl p-6 shadow-lg">
+          <BarChart3 className="h-10 w-10 mb-4 text-primary" />
+          <h3 className="text-xl font-semibold mb-2">Advanced Analytics</h3>
+          <p className="text-muted-foreground">Shot locations, pass networks, and scoring probability analysis.</p>
+        </div>
+        <div className="bg-card rounded-2xl p-6 shadow-lg">
+          <ArrowRight className="h-10 w-10 mb-4 text-primary" />
+          <h3 className="text-xl font-semibold mb-2">AI Commentary</h3>
+          <p className="text-muted-foreground">Professional sports-commentator voice track generated via AI.</p>
+        </div>
+      </div>
     </div>
     
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
